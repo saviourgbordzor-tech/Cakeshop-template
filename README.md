@@ -34,4 +34,4 @@ Built by **[Saviour]**
 
 *   **WhatsApp:** [Chat with me](https://wa.me/233246625602?text=Hello%20Saviour%2C%20I%20saw%20your%20work%20and%20I%27d%20like%20to%20discuss%20a%20website%20for%20my%20business.) 
 *   **Portfolio:** [Coming Soon]
-*     -*Looking for a similar web app for your business? Send me a message on WhatsApp and let's get you online.*
+* *Looking for a similar web app for your business? Send me a message on WhatsApp and let's get you online.*
