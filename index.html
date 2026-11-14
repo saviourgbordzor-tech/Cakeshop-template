@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en-GH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Msrich Cakes & Pastries — The Best Cake Plug in Ho</title>
+<meta name="description" content="Custom cakes, pastries, and book cakes in Ho. Rated 4.9 stars. Women-owned. Build your cake and order directly on WhatsApp.">
+<meta name="theme-color" content="#120A08">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='22'%20fill='%23E85D75'/%3E%3Ctext%20x='50'%20y='72'%20font-family='Georgia,serif'%20font-size='62'%20font-weight='bold'%20fill='%23FFFFFF'%20text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  try {
+    var t = localStorage.getItem('theme');
+    if (t !== 'light' && t !== 'dark') t = 'dark'; 
+    document.documentElement.setAttribute('data-theme', t);
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', t === 'dark' ? '#120A08' : '#F3E9DC');
+  } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+})();
+</script>
+
+<style>
+/* =========================================================
+   DARK THEME (Default) - Midnight Chocolate & Rose Gold
+   ========================================================= */
+:root {
+  color-scheme: dark;
+  --bg: #120A08;
+  --bg-deep: #0A0504;
+  --surface: rgba(30, 18, 15, 0.6);
+  --surface-solid: #1E120F;
+  --line: rgba(212, 175, 55, 0.15);
+  --line-soft: rgba(212, 175, 55, 0.08);
+  
+  --text: #FDFBF7;
+  --text-soft: #C2B3A3;
+  --text-mute: #8C7D6E;
+  
+  --gold: #D4AF37;
+  --gold-light: #F9E5A6;
+  --gold-glow: rgba(212, 175, 55, 0.25);
+  
+  --pink: #E85D75;
+  --pink-dark: #D84B6A;
+  --pink-glow: rgba(232, 93, 117, 0.3);
+  
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 24px 64px rgba(0, 0, 0, 0.8);
+  
+  --header-bg: rgba(18, 10, 8, 0.85);
+  --header-bg-scrolled: rgba(10, 5, 4, 0.95);
+  --radius: 20px;
+  --wrap: 1000px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* =========================================================
+   LIGHT THEME - Coffee, Cream & Rich Chocolate
+   ========================================================= */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #F3E9DC; 
+  --bg-deep: #E8D8C6; 
+  --surface: #FAF4EE; 
+  --surface-solid: #FAF4EE;
+  --line: #D1BFAE;
+  --line-soft: #E0D2C3;
+  --text: #2D1B18; 
+  --text-soft: #5D4037; 
+  --text-mute: #8D6E63; 
+  --gold: #B8860B; 
+  --gold-light: #D4AF37;
+  --gold-glow: rgba(184, 134, 11, 0.15);
+  --pink: #C03958; 
+  --pink-dark: #962B42;
+  --pink-glow: rgba(192, 57, 88, 0.2);
+  --shadow-sm: 0 4px 12px rgba(45, 27, 24, 0.06);
+  --shadow: 0 12px 32px rgba(45, 27, 24, 0.1);
+  --shadow-lg: 0 24px 64px rgba(45, 27, 24, 0.15);
+  --header-bg: rgba(243, 233, 220, 0.85);
+  --header-bg-scrolled: rgba(243, 233, 220, 0.98);
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-text-size-adjust:100%;}
+
+/* Subtle 3D Background Gradient */
+body{
+  margin:0;
+  overflow-x:clip;
+  background: radial-gradient(circle at 50% 0%, #1A0F0C 0%, var(--bg) 60%, var(--bg-deep) 100%);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:1rem;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  padding-bottom:90px;
+  transition:background-color .4s var(--ease), color .4s var(--ease);
+}
+:root[data-theme="light"] body {
+  background: radial-gradient(circle at 50% 0%, #FFFFFF 0%, var(--bg) 60%, var(--bg-deep) 100%);
+}
+
+h1,h2,h3{font-family:"Georgia","Times New Roman",serif;line-height:1.1;margin:0 0 .6rem;letter-spacing:-.01em;font-weight:normal;color:var(--text);}
+p{margin:0 0 1rem;}
+address{font-style:normal;}
+svg{max-width:100%;}
+a { color: var(--gold); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px;}
+
+/* ---------- Scroll Progress Bar ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--pink), var(--gold));
+  z-index: 9999;
+  box-shadow: 0 0 10px var(--pink-glow);
+  transition: width 0.1s ease-out;
+}
+:root[data-theme="light"] .scroll-progress {
+  background: linear-gradient(90deg, var(--pink-dark), var(--gold));
+  box-shadow: 0 0 10px rgba(192, 57, 88, 0.4);
+}
+
+/* ---------- Layout ---------- */
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 1.25rem;}
+.section{padding:5rem 0;position:relative;}
+.section-tint{background:transparent;}
+
+.eyebrow{margin:0 0 .5rem;color:var(--gold);font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;display:inline-flex;align-items:center;gap:.5rem;}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block;}
+.lede{max-width:56ch;margin:.85rem 0 2.5rem;color:var(--text-soft);font-size:1.1rem;line-height:1.7;}
+.section h2{font-size:clamp(2rem, 5vw, 3rem);margin:0 0 1rem;}
+
+/* ---------- Header & Navigation ---------- */
+.site-header{position:sticky;top:0;z-index:80;background:var(--header-bg);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:all .4s var(--ease);}
+.site-header.scrolled{background:var(--header-bg-scrolled);border-bottom:1px solid var(--line-soft);box-shadow:0 4px 20px rgba(0,0,0,0.1);}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:5rem;max-width:var(--wrap);margin:0 auto;padding:.5rem 1.25rem;position:relative;}
+
+.brand{display:flex;flex-direction:column;text-decoration:none;line-height:1;align-items:flex-start;}
+.brand-script {font-family: "Brush Script MT", "Lucida Handwriting", cursive; font-size: 2.6rem; font-weight: 700; color: var(--pink); text-shadow: 0 2px 4px rgba(0,0,0,0.1); line-height: 0.8; letter-spacing: 1px;}
+.brand-serif {font-family: "Georgia", serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.35em; color: var(--gold); margin-top: 6px; font-weight: 700;}
+
+.nav-actions{display:flex;align-items:center;gap:1rem;}
+.theme-toggle{background:transparent;border:1px solid var(--line);color:var(--text);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;cursor:pointer;transition:all .3s;}
+.theme-toggle:hover{border-color:var(--gold);color:var(--gold);}
+.theme-toggle .icon-sun{display:none;}
+.theme-toggle .icon-moon{display:block;}
+:root[data-theme="dark"] .theme-toggle .icon-sun{display:block;}
+:root[data-theme="dark"] .theme-toggle .icon-moon{display:none;}
+
+.menu-btn{display:inline-flex;background:transparent;border:none;color:var(--text);cursor:pointer;padding:8px;flex-direction:column;gap:5px; -webkit-tap-highlight-color: transparent;}
+.menu-btn span{display:block;width:24px;height:2px;background:currentColor;transition:all .3s;}
+.menu-btn.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.menu-btn.open span:nth-child(2){opacity:0;}
+.menu-btn.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+.nav-links{position:absolute;top:100%;left:0;right:0;background:var(--surface-solid);border-bottom:1px solid var(--line);flex-direction:column;padding:1rem;display:none;box-shadow:var(--shadow);}
+.nav-links.open{display:flex;}
+.nav-links a{color:var(--text);text-decoration:none;font-weight:600;padding:.8rem 1rem;border-bottom:1px solid var(--line-soft);transition:color .2s;}
+.nav-links a:hover{color:var(--pink);}
+
+@media(min-width: 768px){
+  .menu-btn{display:none;}
+  .nav-links{position:static;display:flex !important;flex-direction:row;background:transparent;border:none;box-shadow:none;padding:0;gap:1.5rem;}
+  .nav-links a{border:none;padding:0;font-size:.95rem;}
+}
+
+/* ---------- Hero (Modern Glowing Layout) ---------- */
+.hero{position:relative;padding:7rem 0 8rem;overflow:hidden;background:transparent;text-align:left;}
+.hero-glow{position:absolute;top:20%;left:-15%;width:500px;height:500px;background:var(--pink);filter:blur(150px);opacity:0.12;border-radius:50%;pointer-events:none;z-index:0;}
+:root[data-theme="light"] .hero-glow{opacity:0.08;background:var(--gold);}
+
+/* Subtle Glowing Wireframe Cake */
+.hero-svg{
+  position:absolute;
+  top:50%;
+  right:-20%; 
+  transform:translateY(-50%);
+  width:100vw;
+  max-width:800px;
+  height:auto;
+  z-index:0;
+  pointer-events:none;
+  animation:floatCake 20s ease-in-out infinite alternate;
+  opacity:0.4; 
+}
+:root[data-theme="light"] .hero-svg{opacity:0.25;}
+
+/* Floating Sparkles */
+.sparkle{position:absolute;background:var(--gold);border-radius:50%;opacity:0.6;animation:floatUp 8s linear infinite;pointer-events:none;z-index:0;}
+.sparkle:nth-child(1){width:6px;height:6px;left:10%;bottom:20%;animation-duration:7s;animation-delay:0s;}
+.sparkle:nth-child(2){width:8px;height:8px;left:30%;bottom:10%;animation-duration:9s;animation-delay:2s;background:var(--pink);}
+.sparkle:nth-child(3){width:4px;height:4px;left:80%;bottom:40%;animation-duration:6s;animation-delay:4s;}
+.sparkle:nth-child(4){width:10px;height:10px;left:60%;bottom:15%;animation-duration:10s;animation-delay:1s;background:var(--pink);}
+
+.hero-content{position:relative;z-index:1;max-width:650px;}
+
+.badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+.status-pill, .women-owned {display:inline-flex;align-items:center;gap:.5rem;background:var(--surface-solid);border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem;font-size:.8rem;font-weight:600;color:var(--text);box-shadow:var(--shadow-sm);}
+.status-dot{width:8px;height:8px;border-radius:50%;background:#EF4444;position:relative;}
+.status-dot.is-open{background:#4ADE80;animation:pulseGreen 2s infinite;}
+.women-owned { border-color: var(--gold); color: var(--gold); }
+
+.hero-title{font-size:clamp(3rem, 9vw, 5.5rem);line-height:1;margin:0 0 1.5rem;color:var(--text);}
+.hero-title em{font-style:italic;color:var(--gold);text-shadow:0 0 30px var(--gold-glow);}
+.hero-tag{max-width:48ch;margin:0 0 2.5rem;color:var(--text-soft);font-size:1.15rem;line-height:1.6;}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:1.1rem 2rem;border-radius:999px;font-size:1rem;font-weight:700;text-decoration:none;cursor:pointer;transition:all .3s var(--ease);border:2px solid transparent;width:100%;-webkit-tap-highlight-color:transparent;}
+.btn-pink{background:var(--pink);color:#FFF;box-shadow:0 10px 24px var(--pink-glow);}
+.btn-pink:hover{background:var(--pink-dark);transform:translateY(-2px);box-shadow:0 14px 28px var(--pink-glow);}
+.btn-outline{background:transparent;border-color:var(--gold);color:var(--gold);}
+.btn-outline:hover{background:var(--gold);color:var(--bg-deep);}
+
+/* ---------- Auto-Scrolling Showcase ---------- */
+.showcase-wrap{overflow:hidden;position:relative;padding:2rem 0;background:rgba(0,0,0,0.2);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);}
+:root[data-theme="light"] .showcase-wrap{background:rgba(255,255,255,0.3);}
+.showcase-track{display:flex;width:max-content;animation:slideShowcase 30s linear infinite;}
+.showcase-track:hover{animation-play-state:paused;}
+.showcase-item{width:280px;height:200px;margin:0 1rem;border-radius:var(--radius);box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;border:1px solid var(--line);}
+.showcase-item h3{font-family:"Georgia",serif;font-size:1.3rem;z-index:2;margin:0;color:#FFF;text-shadow:0 2px 10px rgba(0,0,0,0.5);}
+.showcase-item p{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;z-index:2;color:rgba(255,255,255,0.8);margin:0;}
+.sc-1{background:linear-gradient(135deg, #D84B6A, #8B1E3F);}
+.sc-2{background:linear-gradient(135deg, #3E2723, #1E120F);}
+.sc-3{background:linear-gradient(135deg, #D4AF37, #997A1E);}
+.sc-4{background:linear-gradient(135deg, #E85D75, #C03958);}
+
+/* ---------- Custom Builder ---------- */
+.builder-card{background:var(--surface);backdrop-filter:blur(20px);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);border:1px solid var(--line);}
+.builder-group{margin-bottom:2rem;}
+.builder-label{font-weight:600;font-size:1rem;margin-bottom:1rem;display:block;color:var(--text);font-family:"Georgia",serif;}
+.pill-group{display:flex;flex-wrap:wrap;gap:.75rem;}
+.pill-opt{position:relative;display:inline-block;}
+.pill-opt input{position:absolute;opacity:0;width:0;height:0;}
+.pill-opt span{display:inline-block;padding:.8rem 1.4rem;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--text-soft);font-size:.95rem;font-weight:500;cursor:pointer;transition:all .25s;}
+.pill-opt input:checked + span{background:var(--pink);border-color:var(--pink);color:#FFF;box-shadow:0 4px 15px var(--pink-glow);font-weight:700;}
+.text-input{width:100%;padding:1.1rem;border:1.5px solid var(--line);border-radius:12px;font-size:1rem;font-family:inherit;color:var(--text);background:var(--bg);}
+.text-input:focus{outline:none;border-color:var(--gold);}
+
+/* ---------- Quick Menu Grid ---------- */
+.menu-grid{display:grid;grid-template-columns:1fr;gap:1.2rem;}
+.menu-item{background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--radius);padding:1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;box-shadow:var(--shadow-sm);transition:all .3s;}
+.menu-item:hover{transform:translateY(-4px);border-color:var(--gold);}
+.menu-info h3{margin:0 0 .25rem;font-size:1.1rem;font-family:-apple-system,sans-serif;}
+.menu-info p{margin:0;font-size:.85rem;color:var(--text-mute);}
+.menu-price{font-family:"Georgia",serif;font-size:1.2rem;font-weight:bold;color:var(--gold);margin-top:.5rem;display:block;}
+
+.qty-control{display:inline-flex;align-items:center;background:var(--bg);border-radius:999px;border:1px solid var(--line);padding:4px;}
+.qty-btn{width:32px;height:32px;border-radius:50%;border:none;background:transparent;color:var(--text);font-size:1.2rem;font-weight:bold;cursor:pointer;display:grid;place-items:center;-webkit-tap-highlight-color:transparent;transition:background-color 0.1s;}
+.qty-btn:hover:not(:disabled){background:var(--line-soft);}
+.qty-btn:disabled{opacity:.3;cursor:not-allowed;}
+.qty-btn.qty-inc{background:var(--gold);color:var(--bg-deep);}
+.qty-btn.qty-inc:active, .qty-btn.qty-inc:focus{background:var(--gold);color:var(--bg-deep);outline:none;}
+.qty-count{min-width:1.5rem;text-align:center;font-weight:700;font-size:.95rem;color:var(--text);}
+
+/* ---------- Packages ---------- */
+.packages-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+.package-card { background:var(--surface-solid); border: 2px solid var(--gold); border-radius: var(--radius); padding: 2rem; position: relative; overflow: hidden; box-shadow: var(--shadow); }
+.package-card::before { content: "PROMO"; position: absolute; top: 15px; right: -30px; background: var(--pink); color: #fff; font-size: 0.7rem; font-weight: bold; padding: 5px 30px; transform: rotate(45deg); }
+.package-title { color: var(--gold); font-family: "Georgia", serif; font-size: 1.5rem; margin-bottom: 0.5rem; }
+.package-price { font-size: 1.3rem; font-weight: 800; color: var(--text); margin-bottom: 1rem; display: block; }
+.package-list { list-style: none; padding: 0; margin: 0 0 1.5rem 0; }
+.package-list li { padding: 0.4rem 0; border-bottom: 1px dashed var(--line); font-size: 0.95rem; color: var(--text-soft); }
+.package-list li:last-child { border-bottom: none; }
+
+/* ---------- Reviews ---------- */
+.reviews-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;margin-top:2rem;}
+.review-card{background:var(--surface);padding:2rem;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow-sm);}
+.stars{color:var(--gold);font-size:1.2rem;letter-spacing:2px;margin-bottom:1rem;}
+.review-text{font-family:"Georgia",serif;font-style:italic;font-size:1.1rem;color:var(--text-soft);line-height:1.6;margin-bottom:1.5rem;}
+.review-author{font-weight:700;font-size:.9rem;color:var(--text);}
+
+/* ---------- Services Tags ---------- */
+.tags-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+.tag { background: var(--surface-solid); border: 1px solid var(--line); padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; color: var(--text); }
+.tag svg { width: 16px; height: 16px; fill: var(--gold); }
+
+/* ---------- Sticky Bar, Toast & FAB ---------- */
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;background:var(--surface-solid);border-top:1px solid var(--gold);padding:1rem 1.25rem calc(1rem + env(safe-area-inset-bottom));box-shadow:0 -10px 30px rgba(0,0,0,0.3);z-index:100;transform:translateY(100%);transition:transform .4s var(--ease);}
+.sticky-bar.is-active{transform:translateY(0);}
+
+.fab{position:fixed;right:1.25rem;bottom:calc(1.25rem + env(safe-area-inset-bottom));z-index:90;display:grid;place-items:center;width:56px;height:56px;border:2px solid var(--white, #fff);border-radius:50%;background:var(--gold);color:var(--bg-deep);box-shadow:0 10px 24px rgba(0,0,0,0.3);text-decoration:none;transition:all .3s var(--ease);}
+.fab::before{content:"";position:absolute;inset:-2px;border-radius:50%;border:2px solid var(--gold);animation:ring 2.6s ease-out infinite;pointer-events:none;}
+.fab svg{width:28px;height:28px;fill:currentColor;}
+.fab:hover{transform:translateY(-3px) scale(1.05);background:var(--gold-light);}
+body.has-selection .fab{transform:translateY(100px);opacity:0;}
+
+.sticky-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--wrap);margin:0 auto;gap:1rem;}
+.sticky-total span{font-size:.75rem;text-transform:uppercase;color:var(--text-mute);font-weight:700;}
+.sticky-total strong{font-family:"Georgia",serif;font-size:1.6rem;color:var(--gold);line-height:1.1;}
+.sticky-btn{width:auto;padding:.8rem 1.5rem;font-size:.95rem;}
+.toast{position:fixed;bottom:100px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--gold);color:var(--bg-deep);padding:.8rem 1.5rem;border-radius:999px;font-weight:700;font-size:.9rem;opacity:0;pointer-events:none;transition:all .3s;z-index:200;box-shadow:var(--shadow-lg);}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+/* ---------- Footer ---------- */
+.site-footer{background:transparent;padding:4rem 0 7rem;text-align:center;border-top:1px solid var(--line-soft);color:var(--text);}
+.footer-brand{font-family: "Brush Script MT", "Lucida Handwriting", cursive; font-size: 3rem; color: var(--gold); margin-bottom: 0; line-height: 1;}
+.footer-copy{font-size:.85rem; color: var(--text-soft); margin-top: 5px;}
+.footer-links{margin-top:1.5rem; display:flex; justify-content:center; gap:1.5rem;}
+.footer-links a{color: var(--text); text-decoration:none; font-weight:600; font-size: .9rem; transition: color .2s;}
+.footer-links a:hover{color: var(--pink);}
+.footer-credit{margin-top: 2rem; font-size: 0.75rem; opacity: 0.6; color: var(--text-mute); letter-spacing: 0.05em; text-transform: uppercase;}
+.footer-credit a { color: inherit; text-decoration: none; transition: color 0.2s; }
+.footer-credit a:hover { color: var(--gold); }
+
+/* ---------- Scroll Animations ---------- */
+.js .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+
+/* ---------- Media Queries ---------- */
+@media (min-width: 768px){
+  .menu-grid{grid-template-columns:repeat(3, 1fr);}
+  .builder-card{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+  .builder-group:nth-child(5){grid-column:1 / -1;}
+  .builder-group:nth-child(6){grid-column:1 / -1;}
+  .reviews-grid{grid-template-columns:repeat(3, 1fr);}
+  .packages-grid{grid-template-columns:repeat(2, 1fr);}
+}
+
+@keyframes floatCake { from { transform: translateY(-50%) rotate(-3deg) scale(1); } to { transform: translateY(-53%) rotate(3deg) scale(1.02); } }
+@keyframes floatUp { 0% { transform: translateY(0) scale(1); opacity: 0; } 20% { opacity: 1; } 80% { opacity: 1; } 100% { transform: translateY(-200px) scale(0); opacity: 0; } }
+@keyframes pulseGreen { 0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); } 70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); } 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); } }
+@keyframes slideShowcase { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes ring { 0% { transform: scale(1); opacity: 0.6; } 80%, 100% { transform: scale(1.4); opacity: 0; } }
+</style>
+</head>
+<body>
+
+<!-- SCROLL PROGRESS BAR -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="nav">
+    <a href="#" class="brand">
+      <span class="brand-script">Msrich</span>
+      <span class="brand-serif">Cakes and Pastries</span>
+    </a>
+    
+    <div class="nav-links" id="navLinks">
+      <a href="#builder" onclick="closeMenu()">Build a Cake</a>
+      <a href="#menu" onclick="closeMenu()">Pastries</a>
+      <a href="#packages" onclick="closeMenu()">Packages</a>
+      <a href="#location" onclick="closeMenu()">Find Us</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4" fill="currentColor"/><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></g></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="currentColor"/></svg>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    
+    <div class="hero-svg">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="cakeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="var(--pink)" stop-opacity="0.15"/>
+            <stop offset="100%" stop-color="var(--gold)" stop-opacity="0.05"/>
+          </linearGradient>
+        </defs>
+        <path d="M15 85 L15 50 C15 35 85 35 85 50 L85 85 Z" fill="url(#cakeGradient)" stroke="var(--gold)" stroke-width="0.5" stroke-opacity="0.4" />
+        <path d="M15 50 C15 35 85 35 85 50" fill="none" stroke="var(--gold)" stroke-width="0.5" stroke-opacity="0.4"/>
+        <path d="M25 50 L25 30 C25 20 75 20 75 30 L75 50" fill="url(#cakeGradient)" stroke="var(--gold)" stroke-width="0.5" stroke-opacity="0.4"/>
+        <circle cx="50" cy="15" r="4" fill="none" stroke="var(--gold)" stroke-width="0.5" stroke-opacity="0.4"/>
+        <path d="M50 5 L50 20" stroke="var(--gold)" stroke-width="0.5" stroke-opacity="0.4" stroke-linecap="round"/>
+      </svg>
+    </div>
+    
+    <div class="wrap">
+      <div class="hero-content reveal">
+        <div class="badge-row">
+          <div class="status-pill">
+            <div class="status-dot" id="statusDot"></div>
+            <span id="statusText">Checking hours...</span>
+          </div>
+          <div class="women-owned">🌸 Women-Owned</div>
+        </div>
+        <h1 class="hero-title">Moist Cakes Only.<br><em>Made with Love.</em></h1>
+        <p class="hero-tag">From book cakes to flower cakes, weddings to birthdays. Design your custom cake below and send the receipt straight to our WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTO-SCROLLING SHOWCASE -->
+  <div class="showcase-wrap">
+    <div class="showcase-track">
+      <div class="showcase-item sc-1"><h3>Book Cakes</h3><p>Custom Shapes</p></div>
+      <div class="showcase-item sc-2"><h3>Flower Cakes</h3><p>Elegant Design</p></div>
+      <div class="showcase-item sc-3"><h3>Character Cakes</h3><p>Themed</p></div>
+      <div class="showcase-item sc-4"><h3>Bento Boxes</h3><p>Perfect Gift</p></div>
+      <!-- Duplicate -->
+      <div class="showcase-item sc-1"><h3>Book Cakes</h3><p>Custom Shapes</p></div>
+      <div class="showcase-item sc-2"><h3>Flower Cakes</h3><p>Elegant Design</p></div>
+      <div class="showcase-item sc-3"><h3>Character Cakes</h3><p>Themed</p></div>
+      <div class="showcase-item sc-4"><h3>Bento Boxes</h3><p>Perfect Gift</p></div>
+    </div>
+  </div>
+
+  <!-- CUSTOM BUILDER -->
+  <section class="section" id="builder">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Custom Order</p>
+        <h2>Design Your Masterpiece</h2>
+        <p class="lede">Select your preferences below. The price will update automatically as you build.</p>
+      </div>
+
+      <div class="builder-card reveal">
+        <div class="builder-group">
+          <label class="builder-label">1. Choose Size</label>
+          <div class="pill-group">
+            <label class="pill-opt"><input type="radio" name="cake-size" value="6 inch" data-price="100" checked><span>6" Cake</span></label>
+            <label class="pill-opt"><input type="radio" name="cake-size" value="8 inch" data-price="130"><span>8" Cake</span></label>
+            <label class="pill-opt"><input type="radio" name="cake-size" value="10 inch" data-price="200"><span>10" Cake</span></label>
+          </div>
+        </div>
+
+        <div class="builder-group">
+          <label class="builder-label">2. Sponge Flavour</label>
+          <div class="pill-group">
+            <label class="pill-opt"><input type="radio" name="cake-flavour" value="Vanilla" data-price="0" checked><span>Vanilla</span></label>
+            <label class="pill-opt"><input type="radio" name="cake-flavour" value="Chocolate" data-price="0"><span>Chocolate</span></label>
+            <label class="pill-opt"><input type="radio" name="cake-flavour" value="Red Velvet" data-price="20"><span>Red Velvet (+20)</span></label>
+          </div>
+        </div>
+
+        <div class="builder-group">
+          <label class="builder-label">3. Icing Type</label>
+          <div class="pill-group">
+            <label class="pill-opt"><input type="radio" name="cake-icing" value="Buttercream" data-price="0" checked><span>Buttercream</span></label>
+            <label class="pill-opt"><input type="radio" name="cake-icing" value="Whipped Cream" data-price="0"><span>Whipped</span></label>
+            <label class="pill-opt"><input type="radio" name="cake-icing" value="Fondant" data-price="50"><span>Fondant (+50)</span></label>
+          </div>
+        </div>
+
+        <div class="builder-group">
+          <label class="builder-label">4. Add-ons</label>
+          <div class="pill-group">
+            <label class="pill-opt"><input type="checkbox" name="cake-addon" value="Cake Topper" data-price="30"><span>Custom Topper (+30)</span></label>
+            <label class="pill-opt"><input type="checkbox" name="cake-addon" value="Wine" data-price="80"><span>Wine (+80)</span></label>
+            <label class="pill-opt"><input type="checkbox" name="cake-addon" value="Chocolates" data-price="25"><span>Chocolates (+25)</span></label>
+          </div>
+        </div>
+
+        <div class="builder-group">
+          <label class="builder-label" for="cake-msg">Message on Cake (Optional)</label>
+          <input type="text" id="cake-msg" class="text-input" placeholder="e.g. Happy Birthday Ama!">
+        </div>
+
+        <div class="builder-group" style="display:flex; align-items:flex-end; margin-bottom:0;">
+           <button type="button" id="add-custom-btn" class="btn btn-pink">Add Custom Cake to Order</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK MENU (FULL LIST) -->
+  <section class="section" id="menu">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Quick Bites</p>
+        <h2>Pastries & Extras</h2>
+        <p class="lede">Add our daily treats and extras to your order. Perfect for a quick craving.</p>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Pastries -->
+        <div class="menu-item reveal">
+          <div class="menu-info"><h3>Meat Pie</h3><p>3 pieces</p><span class="menu-price">GH₵ 20</span></div>
+          <div class="qty-control" data-id="meat-pie" data-name="Meat Pie (3pcs)" data-price="20"><button type="button" class="qty-btn qty-dec" disabled>−</button><span class="qty-count">0</span><button type="button" class="qty-btn qty-inc">+</button></div>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-info"><h3>Spring Rolls</h3><p>4 pieces</p><span class="menu-price">GH₵ 10</span></div>
+          <div class="qty-control" data-id="spring-rolls" data-name="Spring Rolls (4pcs)" data-price="10"><button type="button" class="qty-btn qty-dec" disabled>−</button><span class="qty-count">0</span><button type="button" class="qty-btn qty-inc">+</button></div>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-info"><h3>Mini Loaf Cakes</h3><p>3 pieces</p><span class="menu-price">GH₵ 40</span></div>
+          <div class="qty-control" data-id="loaf-cakes" data-name="Mini Loaf Cakes (3pcs)" data-price="40"><button type="button" class="qty-btn qty-dec" disabled>−</button><span class="qty-count">0</span><button type="button" class="qty-btn qty-inc">+</button></div>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-info"><h3>Milky Doughnuts</h3><p>3 pieces</p><span class="menu-price">GH₵ 30</span></div>
+          <div class="qty-control" data-id="doughnuts" data-name="Milky Doughnuts (3pcs)" data-price="30"><button type="button" class="qty-btn qty-dec" disabled>−</button><span class="qty-count">0</span><button type="button" class="qty-btn qty-inc">+</button></div>
+        </div>
+        
+        <!-- Extras -->
+        <div class="menu-item reveal">
+          <div class="menu-info"><h3>4" Bento Cake</h3><p>Short</p><span class="menu-price">GH₵ 60</span></div>
+          <div class="qty-control" data-id="bento4" data-name="4 inch Bento Cake" data-price="60"><button type="button" class="qty-btn qty-dec" disabled>−</button><span class="qty-count">0</span><button type="button" class="qty-btn qty-inc">+</button></div>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-info"><h3>5" Bento Cake</h3><p>Short</p><span class="menu-price">GH₵ 80</span></div>
+          <div class="qty-control" data-id="bento5" data-name="5 inch Bento Cake" data-price="80"><button type="button" class="qty-btn qty-dec" disabled>−</button><span class="qty-count">0</span><button type="button" class="qty-btn qty-inc">+</button></div>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-info"><h3>6 Pieces Cupcake</h3><p>Assorted</p><span class="menu-price">GH₵ 100</span></div>
+          <div class="qty-control" data-id="cupcakes" data-name="6 Pieces Cupcake" data-price="100"><button type="button" class="qty-btn qty-dec" disabled>−</button><span class="qty-count">0</span><button type="button" class="qty-btn qty-inc">+</button></div>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-info"><h3>Cake In Bowl</h3><p>Fresh</p><span class="menu-price">GH₵ 25</span></div>
+          <div class="qty-control" data-id="bowl" data-name="Cake In Bowl" data-price="25"><button type="button" class="qty-btn qty-dec" disabled>−</button><span class="qty-count">0</span><button type="button" class="qty-btn qty-inc">+</button></div>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-info"><h3>Champagne</h3><p>Bottle</p><span class="menu-price">GH₵ 50</span></div>
+          <div class="qty-control" data-id="champagne" data-name="Champagne" data-price="50"><button type="button" class="qty-btn qty-dec" disabled>−</button><span class="qty-count">0</span><button type="button" class="qty-btn qty-inc">+</button></div>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-info"><h3>Flower Bouquet</h3><p>Fresh</p><span class="menu-price">GH₵ 150</span></div>
+          <div class="qty-control" data-id="bouquet" data-name="Flower Bouquet" data-price="150"><button type="button" class="qty-btn qty-dec" disabled>−</button><span class="qty-count">0</span><button type="button" class="qty-btn qty-inc">+</button></div>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-info"><h3>1 Stem Rose</h3><p>Single</p><span class="menu-price">GH₵ 35</span></div>
+          <div class="qty-control" data-id="rose" data-name="1 Stem Rose" data-price="35"><button type="button" class="qty-btn qty-dec" disabled>−</button><span class="qty-count">0</span><button type="button" class="qty-btn qty-inc">+</button></div>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-info"><h3>Chocolate Bar</h3><p>Single</p><span class="menu-price">GH₵ 30</span></div>
+          <div class="qty-control" data-id="choc" data-name="Chocolate Bar" data-price="30"><button type="button" class="qty-btn qty-dec" disabled>−</button><span class="qty-count">0</span><button type="button" class="qty-btn qty-inc">+</button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE PACKAGES -->
+  <section class="section" id="packages">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Signature Packages</p>
+        <h2>Curated Gift Bundles</h2>
+        <p class="lede">Perfect for Valentine's, Mother's Day, or just to show love. Order directly via WhatsApp.</p>
+      </div>
+
+      <div class="packages-grid">
+        <div class="package-card reveal">
+          <h3 class="package-title">Romantic Rendezvous</h3>
+          <span class="package-price">GH₵ 750</span>
+          <ul class="package-list">
+            <li>6 Inches Customized Vals Cake</li>
+            <li>1 Bottle Of Champagne</li>
+            <li>Pastry Pack</li>
+            <li>Flower Bouquet</li>
+            <li>Bar Of Chocolate + Vals Card</li>
+          </ul>
+          <a href="https://wa.me/233554948363?text=Hello%20Msrich%20Cakes,%20I%20want%20to%20order%20the%20Romantic%20Rendezvous%20package%20(GH%C2%A2750)" target="_blank" class="btn btn-outline">Order This Package</a>
+        </div>
+
+        <div class="package-card reveal">
+          <h3 class="package-title">Pastry Pack</h3>
+          <span class="package-price">GH₵ 350</span>
+          <ul class="package-list">
+            <li>8 Inches Cake</li>
+            <li>1 Bottle Champagne</li>
+            <li>4 Filled Doughnuts</li>
+            <li>6 Pieces Spring Rolls (Beef & Veg)</li>
+            <li>10 Pieces Shortbread Biscuit</li>
+            <li>3 Packs Fried Chips + 1.5l Coke</li>
+          </ul>
+          <a href="https://wa.me/233554948363?text=Hello%20Msrich%20Cakes,%20I%20want%20to%20order%20the%20Pastry%20Pack%20(GH%C2%A2350)" target="_blank" class="btn btn-outline">Order This Package</a>
+        </div>
+
+        <div class="package-card reveal">
+          <h3 class="package-title">Best Mum</h3>
+          <span class="package-price">GH₵ 350</span>
+          <ul class="package-list">
+            <li>6" Two Layers Cake</li>
+            <li>1 Bottle of Champagne</li>
+            <li>Mother's Day Card</li>
+          </ul>
+          <a href="https://wa.me/233554948363?text=Hello%20Msrich%20Cakes,%20I%20want%20to%20order%20the%20Best%20Mum%20package%20(GH%C2%A2350)" target="_blank" class="btn btn-outline">Order This Package</a>
+        </div>
+
+        <div class="package-card reveal">
+          <h3 class="package-title">Tender Touch</h3>
+          <span class="package-price">GH₵ 240</span>
+          <ul class="package-list">
+            <li>Bento Cake With 5 Cupcakes</li>
+            <li>A Bar Of Chocolate</li>
+            <li>Vals Card</li>
+          </ul>
+          <a href="https://wa.me/233554948363?text=Hello%20Msrich%20Cakes,%20I%20want%20to%20order%20the%20Tender%20Touch%20package%20(GH%C2%A2240)" target="_blank" class="btn btn-outline">Order This Package</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section" id="reviews">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Google Reviews</p>
+        <h2>Rated 4.9 out of 5</h2>
+        <p class="lede">Based on 24 reviews from customers in Ho.</p>
+      </div>
+      
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"The best cake I've ever tasted in Ho. So moist and the design was exactly what I asked for."</p>
+          <p class="review-author">— Ama K.</p>
+        </div>
+        <div class="review-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Ordered a bento box and parfait for my girlfriend. She loved it. Delivery was fast too."</p>
+          <p class="review-author">— Kofi M.</p>
+        </div>
+        <div class="review-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Msrich handled my wedding cake perfectly. Beautiful and delicious. Highly recommended."</p>
+          <p class="review-author">— Sarah O.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & SERVICES -->
+  <section class="section" id="location">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Visit Us</p>
+        <h2>Find Us in Ho</h2>
+        <p class="lede">Methodist Education Unit, Ho – Rabazey Street. (Plus Code: JF5F+66)</p>
+      </div>
+      
+      <div class="reveal" style="background:var(--surface-solid); padding:2rem; border-radius:var(--radius); border:1px solid var(--line); margin-bottom:1.5rem; display:flex; flex-direction:column; gap:1.5rem; box-shadow:var(--shadow-sm);">
+        
+        <div>
+          <p style="margin:0 0 .5rem; font-weight:700; color:var(--gold); font-size:1.1rem;">Opening Hours:</p>
+          <p style="margin:0 0 .25rem; font-size:1rem; color:var(--text-soft);">Mon – Tue: 8:00 AM – 8:00 PM</p>
+          <p style="margin:0; font-size:1rem; color:var(--text-soft);">Wed – Sun: 9:00 AM – 8:00 PM</p>
+        </div>
+        
+        <div>
+          <p style="margin:0 0 .5rem; font-weight:700; color:var(--gold); font-size:1.1rem;">Contact:</p>
+          <p style="margin:0; font-weight:700; font-size:1rem;">Call Us: <a href="tel:+233554948363" style="color: var(--pink);">+233 55 494 8363</a></p>
+        </div>
+
+        <div>
+          <p style="margin:0 0 .75rem; font-weight:700; color:var(--gold); font-size:1.1rem;">Service Options:</p>
+          <div class="tags-grid">
+            <div class="tag"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm12 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM17 12V9.5h2.5l1.96 2.5H17z"/></svg> Delivery</div>
+            <div class="tag"><svg viewBox="0 0 24 24"><path d="M19 4h-3V2h-2v2H6v2h12V4zM6 18v-2h12v2H6zm12-7.5l-2-2-7 7-3-3-1.5 1.5 4.5 4.5 9-9z"/></svg> In-store Pick-up</div>
+            <div class="tag"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg> NFC Mobile Pay</div>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="https://www.google.com/maps/place/Msrich+Cakes+and+Pastries+Ho/@6.5994061,0.4614087,15z/data=!4m10!1m3!11m2!2siA5FuxYWhFehPeUSQqbVJPgiMTNyPw!3e1!3m5!1s0x102725b73cfb4147:0x4ab646fa016da78c!8m2!3d6.6080888!4d0.4730405!16s%2Fg%2F11jr_wxwc9?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="btn btn-pink reveal" style="margin:0; display:flex;">Get Directions</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap reveal">
+    <div class="footer-brand">Msrich</div>
+    <p class="footer-copy">© 2026 Msrich Cakes and Pastries · Ho</p>
+    <div class="footer-links">
+      <a href="https://instagram.com/msrichcakes" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://tiktok.com/@msrichcakes" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://wa.me/233554948363" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    
+    <!-- EDIT: Update this href to your portfolio website when it's ready -->
+    <p class="footer-credit">Website by <a href="#">Saviour</a></p>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/233554948363?text=Hello%20Msrich%20Cakes,%20I%20have%20a%20quick%20question" target="_blank" rel="noopener" class="fab" id="waFab" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.72 2.63 4.17 3.69.58.25 1.04.4 1.39.51.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+</a>
+
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-inner">
+    <div class="sticky-total">
+      <span>Total Order</span>
+      <strong id="totalDisplay">GH₵ 0</strong>
+    </div>
+    <button type="button" class="btn btn-pink sticky-btn" id="sendOrderBtn">Send Order</button>
+  </div>
+</div>
+
+<div class="toast" id="toast">Added to order!</div>
+
+<script>
+(function () {
+  // --- Navigation & Header Scroll ---
+  var menuBtn = document.getElementById('menuBtn');
+  var navLinks = document.getElementById('navLinks');
+  var header = document.getElementById('siteHeader');
+  var progressBar = document.getElementById('scrollProgress');
+  
+  window.toggleMenu = function() {
+    navLinks.classList.toggle('open');
+    menuBtn.classList.toggle('open');
+  }
+  window.closeMenu = function() {
+    navLinks.classList.remove('open');
+    menuBtn.classList.remove('open');
+  }
+
+  menuBtn.addEventListener('click', window.toggleMenu);
+
+  // Unified Scroll Listener
+  window.addEventListener('scroll', function() {
+    // Header elevation
+    if (window.scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+
+    // Scroll Progress Bar
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    if (scrollHeight > 0) {
+      var scrolled = (scrollTop / scrollHeight) * 100;
+      progressBar.style.width = scrolled + '%';
+    } else {
+      progressBar.style.width = '0%';
+    }
+  });
+
+  // --- Scroll Reveal Animations ---
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
+    
+    reveals.forEach(function(el) { observer.observe(el); });
+  } else {
+    reveals.forEach(function(el) { el.classList.add('in'); });
+  }
+
+  // --- Theme Toggle ---
+  var themeToggle = document.getElementById('themeToggle');
+  var themeMeta = document.querySelector('meta[name="theme-color"]');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      var current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      var next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      if (themeMeta) themeMeta.setAttribute('content', next === 'dark' ? '#120A08' : '#F3E9DC');
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  }
+
+  // --- Live Open/Closed Status ---
+  var statusDot = document.getElementById('statusDot');
+  var statusText = document.getElementById('statusText');
+
+  function updateStatus() {
+    var now = new Date();
+    var day = now.getUTCDay(); 
+    var h = now.getUTCHours();
+    var m = now.getUTCMinutes();
+    var timeVal = h + (m / 60);
+    var isOpen = false;
+    var closeTime = 20; 
+
+    if (day === 1 || day === 2) { // Mon, Tue
+      if (timeVal >= 8 && timeVal < closeTime) isOpen = true;
+    } else { // Wed - Sun
+      if (timeVal >= 9 && timeVal < closeTime) isOpen = true;
+    }
+
+    if (isOpen) {
+      statusDot.classList.add('is-open');
+      statusText.textContent = "Open Now · Closes 8 PM";
+    } else {
+      statusDot.classList.remove('is-open');
+      statusText.textContent = "Closed · Opens " + (day === 1 || day === 2 ? "8 AM" : "9 AM");
+    }
+  }
+  updateStatus();
+  setInterval(updateStatus, 60000); 
+
+  // --- Cart Logic ---
+  // Now uses Msrich Cakes' actual number
+  var WA_PHONE = '233554948363'; 
+  var cart = [];
+  var stickyBar = document.getElementById('stickyBar');
+  var totalDisplay = document.getElementById('totalDisplay');
+  var sendOrderBtn = document.getElementById('sendOrderBtn');
+  var toast = document.getElementById('toast');
+  var waFab = document.getElementById('waFab');
+
+  function showToast() {
+    toast.classList.add('show');
+    setTimeout(function() { toast.classList.remove('show'); }, 2000);
+  }
+
+  var customBtn = document.getElementById('add-custom-btn');
+  var cakeMsgInput = document.getElementById('cake-msg');
+
+  function calculateCustomPrice() {
+    var size = document.querySelector('input[name="cake-size"]:checked');
+    var flavour = document.querySelector('input[name="cake-flavour"]:checked');
+    var icing = document.querySelector('input[name="cake-icing"]:checked');
+    var addons = document.querySelectorAll('input[name="cake-addon"]:checked');
+    var price = parseInt(size.dataset.price) + parseInt(flavour.dataset.price) + parseInt(icing.dataset.price);
+    addons.forEach(function(addon) { price += parseInt(addon.dataset.price); });
+    return price;
+  }
+
+  customBtn.addEventListener('click', function() {
+    var size = document.querySelector('input[name="cake-size"]:checked').value;
+    var flavour = document.querySelector('input[name="cake-flavour"]:checked').value;
+    var icing = document.querySelector('input[name="cake-icing"]:checked').value;
+    var addonsArr = [];
+    document.querySelectorAll('input[name="cake-addon"]:checked').forEach(function(addon) { addonsArr.push(addon.value); });
+    var msg = cakeMsgInput.value.trim();
+    var price = calculateCustomPrice();
+    
+    var name = "Custom " + size + " " + flavour + " Cake (" + icing + ")";
+    if (addonsArr.length > 0) name += " + " + addonsArr.join(', ');
+    
+    var details = {};
+    if (msg) details.message = msg;
+
+    addToCart(name, price, details);
+    cakeMsgInput.value = '';
+    document.querySelectorAll('input[name="cake-addon"]').forEach(function(cb) { cb.checked = false; });
+    showToast();
+  });
+
+  var qtyControls = document.querySelectorAll('.qty-control');
+  qtyControls.forEach(function(control) {
+    var decBtn = control.querySelector('.qty-dec');
+    var incBtn = control.querySelector('.qty-inc');
+    var countSpan = control.querySelector('.qty-count');
+    var itemId = control.dataset.id;
+    var itemName = control.dataset.name;
+    var itemPrice = parseInt(control.dataset.price);
+    var qty = 0;
+
+    function updateCart() {
+      countSpan.textContent = qty;
+      decBtn.disabled = qty === 0;
+      var existingItem = cart.find(function(item) { return item.id === itemId; });
+      if (existingItem) {
+        existingItem.qty = qty;
+        if (qty === 0) cart = cart.filter(function(item) { return item.id !== itemId; });
+      } else if (qty > 0) {
+        cart.push({ id: itemId, name: itemName, price: itemPrice, qty: qty, details: {} });
+      }
+      renderTotal();
+    }
+
+    incBtn.addEventListener('click', function() { qty++; updateCart(); });
+    decBtn.addEventListener('click', function() { if (qty > 0) { qty--; updateCart(); } });
+  });
+
+  function addToCart(name, price, details) {
+    var itemId = 'custom_' + Date.now(); 
+    cart.push({ id: itemId, name: name, price: price, qty: 1, details: details });
+    renderTotal();
+  }
+
+  function renderTotal() {
+    var total = cart.reduce(function(sum, item) { return sum + (item.price * item.qty); }, 0);
+    totalDisplay.textContent = 'GH₵ ' + total;
+    if (cart.length > 0) {
+      stickyBar.classList.add('is-active');
+      document.body.classList.add('has-selection'); 
+    } else {
+      stickyBar.classList.remove('is-active');
+      document.body.classList.remove('has-selection');
+    }
+  }
+
+  sendOrderBtn.addEventListener('click', function() {
+    if (cart.length === 0) return;
+    var message = "Hello Msrich Cakes! I would like to place an order:\n\n";
+    var total = 0;
+
+    cart.forEach(function(item) {
+      var lineTotal = item.price * item.qty;
+      total += lineTotal;
+      message += "• " + item.qty + "x " + item.name + " — GH₵ " + lineTotal + "\n";
+      if (item.details && item.details.message) {
+        message += "   _(Message on cake: \"" + item.details.message + "\")_\n";
+      }
+    });
+
+    message += "\n*Total: GH₵ " + total + "*\n\n";
+    message += "Please let me know if this is possible and how I can pay.";
+    var url = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(message);
+    window.open(url, '_blank');
+  });
+})();
+</script>
+
+</body>
+</html>
